@@ -23,5 +23,6 @@ def home(request):
     icon = res['weather'][0]['icon']
     temp = res['main']['temp']
     day = datetime.date.today
+    time = datetime.time
 
-    return render(request, 'weatherapp/index.html', {'description':description, 'icon':icon, 'temp':temp, 'day':day, 'city':city})
+    return render(request, 'weatherapp/index.html', {'description':description, 'icon':icon, 'temp':temp, 'day':day, 'city':city, 'time':time})
