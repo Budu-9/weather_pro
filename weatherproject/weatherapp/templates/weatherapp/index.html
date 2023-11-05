@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter City" name="city" />
+        <button type="submit">Enter</button>
+    </form>
+    <h1>{{day}}</h1>
+    <h1>{{city}}</h1>
+    <h1>{{temp}}</h1>
+   <img src="http://openweathermap.org/img/w/{{icon}}.png">
+   <h1>{{description}}</h1> 
+</body>
+</html>
